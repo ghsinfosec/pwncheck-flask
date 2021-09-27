@@ -19,4 +19,4 @@ git clone https://github.com/ghsinfosec/pwncheck-flask.git
 ```
 
 ## Setup
-You will need some sort of web engine, like nginx, setup and configured to deploy this app. Configuration of your nginx service is outside the scope of this repo. For a good reference, check out[this article](https://sinaru.com/2020/07/10/serving-flask-app-with-nginx/).
+You will need some sort of web engine, like nginx, setup and configured to deploy this app. Configuration of your nginx service is outside the scope of this repo. For a good reference, check out [this article](https://sinaru.com/2020/07/10/serving-flask-app-with-nginx/).
