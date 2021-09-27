@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>What is pwncheck?</h1>
+    <p>pwncheck is a project that leverages the <a href="https://haveibeenpwned.com">Have I Been Pwned</a>
+    Pwned Passwords API to check your password against a list of over 613 million leaked passwords from
+    known data breaches. You simply enter your password, or a password you'd like to use, and see
+    if it's been listed in a data breach.</p>
+    <p><strong>NOTE:</strong> Passwords are NOT stored in this list, but rather stored as a
+    partial SHA1 hash of the original leaked password. This method ensures that the leaked passwords
+    cannot be seen in plain text or by reversing the hashing algorithm, making it a secure way to check
+    for known leaked passwords.</p>
+    <br>
+    <h2>Technical Details</h2>
+    <p>Once again, be aware that your password is NOT stored in any way by the API or by this server.
+    Privacy is highly important and therefore this utility was developed in such a way as to
+    ensure complete privacy on the part of the user(s).</p>
+    <p>The way pwncheck works is to generate a SHA1 hash of the password you enter. This hash
+    is then split into 2 parts; a prefix and a suffix. The prefix is used to look up the hash
+    stored in the Pwned Passwords API. The API only contains the suffix of the hash that gets
+    generated on password submission, and not the full password hash. Also contained with the hash
+    suffix is a count of the times that the submitted password has been seen in data breached. To test
+    it out, try entering the word 'password' in the search bar and see how many times it was discovered.</p>
+    <p>For more information check out
+    <a href="https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/">this blog post</a>
+    by Troy Hunt, the author of Have I Been Pwned.</p>
+{% endblock content %}
