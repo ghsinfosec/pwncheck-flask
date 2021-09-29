@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
-from util import pwncheck
-from forms import PasswordForm
+from util import pwncheck, pw_generator
+from forms import PasswordForm, PWGeneratorForm
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'YOUR_KEY_HERE'
@@ -27,6 +27,16 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('generator', methods=['GET', 'POST'])
+def generator():
+    form = PWGeneratorForm()
+    password = pw_generator.generate_pw()
+
+    if form.validate_on_submit():
+        return render_template('generator.html', form=form, password=password)
+    return render_template('generator.html', form=form)
 
 
 if __name__ == '__main__':
