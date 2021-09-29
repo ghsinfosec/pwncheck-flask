@@ -1,4 +1,4 @@
-# pwncheck
+# pwncheck-flask
 ![pwncheck-flask-gif](./pwncheck-flask.gif)
 ## Breached password checker
 pwncheck-flask is a flask app that can be deployed as web service to check the status of any passwords you have or plan to use. You could possibly deploy this on an internal web server for your users to check their passwords. It leverages the [HaveIBeenPwned](https://haveibeenpwned.com) pwndpasswords api to check the SHA1 hash of a provided password.
