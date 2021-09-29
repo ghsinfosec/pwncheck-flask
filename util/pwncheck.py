@@ -30,7 +30,7 @@ def pwncheck(password):
     # no match found, pw is good for now
     if pw_hash != k:
         status = f'The password you entered has not been found \
-        in any data breach and is safe to use!'
+        in any data breaches!'
         message = 'safe'
 
     return status, message
