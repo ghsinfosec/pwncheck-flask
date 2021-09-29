@@ -5,6 +5,9 @@ pwncheck-flask is a flask app that can be deployed as web service to check the s
 
 If pwncheck discovers the submitted password in the pwnedpasswords list, it will display a red banner letting you know how many times that password was seen in data breaches. Otherwise it will display a green banner letting you know that the password you entered has not been breached.....yet...
 
+### Update
+I added a new page and python script to generate a random password. Nothing special, but I thought it would be nice to have an option to let users generate a new password. I may add functionality to copy the password to the clipboard, but I don't know if that's necessary at this point. 
+
 ## Requirements
 
 
